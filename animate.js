@@ -1,35 +1,42 @@
-function animate(list) {
+var animate = function() {
 
-  var item,
-    duration,
-    end = 0;
+  function defaultEasing(rate) {
+    return 1 - Math.pow(rate, 3);
+  }
 
-  var step = function() {
+  return function animate(list, easing) {
 
-    var current = +new Date(),
-      remaining = end - current;
+    var item,
+      duration,
+      end = 0;
 
-    if (remaining < 60) {
+    var step = function() {
 
-      if (item) item.run(1); //1 = progress is at 100%
+      var current = +new Date(),
+        remaining = end - current;
 
-      item = list.shift(); //get the next item
+      if (remaining < 60) {
 
-      if (item) {
-        duration = item.time * 1000;
-        end = current + duration;
-        item.run(0); //0 = progress is at 0%
+        if (item) item.run(1); //1 = progress is at 100%
+
+        item = list.shift(); //get the next item
+
+        if (item) {
+          duration = item.time * 1000;
+          end = current + duration;
+          item.run(0); //0 = progress is at 0%
+        } else {
+          return;
+        }
+
       } else {
-        return;
+        var rate = remaining / duration;
+        rate = easying ? easing(rate) : defaultEasing(rate);
+        item.run(rate);
       }
 
-    } else {
-      var rate = remaining / duration;
-      rate = 1 - Math.pow(rate, 3); //easing formula
-      item.run(rate);
-    }
-
-    _requestAnimationFrame(step);
+      _requestAnimationFrame(step);
+    };
+    step();
   };
-  step();
-}
+}();
