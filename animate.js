@@ -4,7 +4,7 @@ var animate = function() {
     return 1 - Math.pow(rate, 3);
   }
 
-  return function animate(list, easing) {
+  return function animate(list) {
 
     var item,
       duration,
@@ -31,7 +31,7 @@ var animate = function() {
 
       } else {
         var rate = remaining / duration;
-        rate = easying ? easing(rate) : defaultEasing(rate);
+        rate = item.easing ? item.easing(rate) : defaultEasing(rate);
         item.run(rate);
       }
 
