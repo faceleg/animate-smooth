@@ -15,6 +15,10 @@ animate([
     run: function(rate) {
       this.node.style
         .width = (rate*(this.end - this.start) + this.start) + "px";
+    },
+    // Custom easing function - you can leave this out to use default
+    easing: function(rate) {
+        return rate < 0.5 ? 2 * rate * rate : -1 + (4 - 2 * rate) * rate;
     }
   }
 ]);
