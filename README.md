@@ -1,7 +1,7 @@
 Animate
 =======
 
-Animation function that uses requestAnimationFrame. Adapted from: [1](Simple Animations Using requestAnimationFrame).
+Animation function that uses requestAnimationFrame. Adapted from: [Simple Animations Using requestAnimationFrame][1].
 
 Example usage: 
 
@@ -19,4 +19,4 @@ animate([
   }
 ]);
 ```
-[1] http://www.sitepoint.com/simple-animations-using-requestanimationframe/
+[1]:http://www.sitepoint.com/simple-animations-using-requestanimationframe/
