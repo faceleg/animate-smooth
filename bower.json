@@ -1,7 +1,7 @@
 {
-  "name": "animate",
+  "name": "animate-smooth",
   "version": "0.0.2",
-  "homepage": "https://github.com/BrownPaperBag/animate",
+  "homepage": "https://github.com/BrownPaperBag/animate-smooth",
   "authors": [
     "Dmitri Lau <http://www.sitepoint.com/author/dlau/",
     "Michael Robinson <mike@brownpaperbag.co.nz>"
