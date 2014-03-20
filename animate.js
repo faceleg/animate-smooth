@@ -8,6 +8,7 @@ var animate = function() {
     };
   })();
 
+  // See https://gist.github.com/gre/1650294 for more easing functions
   function defaultEasing(rate) {
     return 1 - Math.pow(rate, 3);
   }
