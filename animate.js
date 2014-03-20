@@ -24,7 +24,7 @@ var animate = function() {
       var current = +new Date(),
         remaining = end - current;
 
-      if (remaining < 60) {
+      if (remaining < 16) {
 
         if (item) item.run(1); //1 = progress is at 100%
 
