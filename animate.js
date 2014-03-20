@@ -44,7 +44,7 @@ var animate = function() {
         item.run(rate);
       }
 
-      _requestAnimationFrame(step);
+      requestAnimFrame(step);
     };
     step();
   };
