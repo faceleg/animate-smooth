@@ -1,5 +1,11 @@
 var animate = function() {
 
+  var _requestAnimationFrame = function(win, t) {
+    return win['webkitR' + t] || win['r' + t] || win['mozR' + t] || win['msR' + t] || function(fn) {
+      setTimeout(fn, 60);
+    };
+  }(window, 'equestAnimationFrame');
+
   function defaultEasing(rate) {
     return 1 - Math.pow(rate, 3);
   }
