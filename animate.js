@@ -31,7 +31,7 @@ var animate = function() {
         item = list.shift(); //get the next item
 
         if (item) {
-          duration = item.time * 1000;
+          duration = item.time;
           end = current + duration;
           item.run(0); //0 = progress is at 0%
         } else {
