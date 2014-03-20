@@ -1,4 +1,4 @@
-Animate
+Animate Smooth
 =======
 
 Animation function that uses requestAnimationFrame. Adapted from: [Simple Animations Using requestAnimationFrame][1].
