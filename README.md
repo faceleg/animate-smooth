@@ -9,12 +9,12 @@ Example usage:
 animate([
   {
     time: 2,
-    node: document.getElementById("box"),
+    node: document.getElementById('box'),
     start: 100,
     end: 300,
     run: function(rate) {
       this.node.style
-        .width = (rate*(this.end - this.start) + this.start) + "px";
+        .width = (rate*(this.end - this.start) + this.start) + 'px';
     },
     // Custom easing function - you can leave this out to use default
     easing: function(rate) {
